@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <!--Body Code Start-->
+      <!--Hero Image Code-->     
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Welcome!</h1>
+          <h2>Communicate and be on the loop</h2>
+        </div>
+      </div>
+      <div class="background-picture-body">
+      <!--Events Card Group-->
+        <h3>Next Games On Schedule:</h3>
+            <div class="card-group scrollcards">
+              {% for query in query_data %}
+              <div class="card">
+                <img src="static/images/{{ query[8] }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ query[7] }}</h5>
+                  <p class="card-text">{{ query[0] }}</p>
+                  <p>{{ query[1] }} {{ query[2] }} </p>
+                  <a href="#popup{{ loop.index }}" class="btn btn-primary">View More</a>
+                </div>
+              </div>
+              <div id="popup{{ loop.index }}" class="overlay content">
+                <div class="popup">
+                  <h3>{{ query[7] }}</h3>
+                  <br>
+                  <p><strong>Date:</strong></p>
+                  <p>{{ query[1] }}  {{ query[2] }} </p>
+                  <p><strong>Location:</strong></p>
+                  <p>{{ query[3] }}</p>
+                  <p>{{ query[4] }}, {{ query[5] }} {{ query[6] }}.</p>
+                  <p><strong>Van Driver: </strong>{{ query[9] }}</p>
+                  <p><strong>Van Name: </strong>{{ query[13] }} <strong>Plate: </strong>{{ query[14] }}</p>
+                  <p><strong>Worker: </strong>{{ query[12] }} </p>
+                  <p><strong>Essential: </strong>{{ query[15] }}</p>
+                  <a class="close" href="#">&times;</a>
+                </div>
+              </div>
+          {% endfor %}
+          </div>
+      </div>
+<!--Body Code End-->
+{% block news %}
+{% endblock news %}
+{% endblock content %}

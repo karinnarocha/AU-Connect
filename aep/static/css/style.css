@@ -1,0 +1,393 @@
+/* GENERAL FONT STYLING */ 
+
+h1{
+  text-align:center;
+  font-family:Archivo, Barlow, serif;
+  padding:20px 50px, 0px, 50px;
+  color:white;
+  text-transform: uppercase;
+  font-weight:bold;
+  font-size: 60px;
+}
+
+h2 {
+  text-align:center;
+  font-family:'Barlow';
+  padding:20px 50px, 0px, 50px;
+  color:white;
+  text-transform: uppercase;
+}
+
+h3 {
+  text-align:center;
+  font-family:'Barlow';
+  color:#380D36;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-top: 50px;
+
+}
+
+h4 {
+  text-align:center;
+  font-family:'Barlow';
+  padding:20px 50px, 0px, 50px;
+  color:white;
+  text-transform: uppercase;
+}
+
+h5 {
+  text-align:center;
+  font-family: 'Barlow';
+  color:white;
+  text-transform: uppercase;
+}
+
+h6 {
+  text-align:center;
+  font-family:'Barlow';
+  color:white;
+  padding-top: 20px;
+}
+
+p {
+  font-family: 'Arial';
+}
+
+/* EVERYTHING RELATED TO BODY */ 
+
+.container {
+  min-height:100vh !important;
+  max-width:100% !important;
+  margin:0px auto !important;
+  padding-left:0;
+  padding-right:0;
+}
+
+html, body {
+  max-width:100% !important;
+}
+
+.background-picture-body {
+  background-image:url("/static/images/mainstory.jpg");
+  width:100%;
+  min-height: 790px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+/* EVERYTHING RELATED TO ADMIN */ 
+
+.admin_icon{
+  float: left;
+}
+.admin_form{
+  max-width: 500px;
+  padding-top: 30px;
+  margin: auto;
+}
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > .input-group-text {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  width: 100%;
+}
+/* EVERYTHING RELATED TO LOG IN */ 
+
+.content-login-section {
+    width:450px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin: 0 auto;
+    background-image: linear-gradient(#380D36, #D01F3B);
+    text-align:center;
+    color: white;
+    margin-top:100px;
+    font-family:'Barlow';
+}
+
+.btn {
+    background-color:#380D36;
+    border:none;
+    color: white;
+}
+
+.btn:hover {
+    background-color:#D01F3B;
+
+}
+.login_image{
+  width: 55%; 
+}
+
+.login_image_div{
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+.background-picture-body-login {
+  background-image:url("/static/images/mainstory_img_default_blank.jpg");
+  width:100%;
+  min-height: 1300px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.alert, .alert-danger {
+  z-index:2;
+}
+
+/* EVERYTHING RELATED TO NAV */ 
+
+#header-nav {
+    background-color: #380D36;
+    padding:20px 20px;
+    text-align:center;
+    width: 100%;
+}
+
+#header-nav a {
+    text-decoration:none;
+    color:white;
+    font-family:'Barlow';
+    font-weight: bold;
+    padding:0px 20px;
+}
+
+
+/* EVERYTHING RELATED TO THE  MAIN PAGE IMAGE */ 
+
+
+
+.hero-image {
+  background-image:url("/static/images/nycimage.png");
+  max-width: 100%;
+  height: 450px;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity:0.5;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: black;
+    opacity:0;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow:5px 5px 5px black;
+}
+
+
+/* RELATED TO LOGOUT */
+.logout {
+    float:right;
+}
+
+/* RELATED TO EVENTS */
+.card {
+  border: 2px solid #380D36;
+  margin: 20px;
+  transition: .6s ease;
+  max-width:100%;
+  color:#380D36;
+  align-content: center;
+}
+
+.card img {
+  height: 150px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-block {
+   padding: 10px;
+}
+    
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.card-title {
+    padding:inherit;
+    font-weight:bold;
+    text-align: center;
+    overflow: auto;
+    color:#380D36;
+}
+
+
+.scrollcards {
+  background-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align:center;
+  width:100%;
+  padding:20px 0px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+.scrollcards .card {
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+    height:100%;
+    overflow:scroll;
+    white-space: normal;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:2;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 2s ease-in-out;
+  height:fit-content;
+  text-align:left;
+  overflow: hidden;
+  white-space: normal;
+
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align:center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #D01F3B;
+}
+
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+#wgtmsr{
+  width:300px;   
+ }
+
+/* ENDING RELATED TO EVENTS */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+
+
+/* RELATED TO FOOTER */
+
+footer {
+  background-color:#380D36; 
+  width: 100%;
+  height: 60px;
+  margin-bottom:0px;
+  position: relative;
+  font-family:'Barlow';
+  clear:both;
+}
+
+/* RELATED TO MEDIA*/
+
+
+@media only screen and (max-width: 864px){
+  .admin_form{
+    width: 100%;
+  }
+  .content-login-section{
+    max-width: 98%;
+  }
+  .popup {
+    width:80%;
+  }
+
+  .hero-text h1 {
+    font-size:300%;
+  }
+  .hero-text h2 {
+    font-size:200%;
+  }
+  .background-picture-body {
+    width:100%;
+    min-height: 790px;
+  }
+  .background-picture-body-login {
+    width:100%;
+    min-height: 1300px;
+  }
+
+}

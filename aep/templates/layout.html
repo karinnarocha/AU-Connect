@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+
+      {% if title %}
+          <title>Athletics Event Planner - {{ title }}</title>
+      {% else %}
+          <title>Athletics Event Planner</title>
+      {% endif %}
+  </head>
+  <body>
+    <header>
+      <!--Top Menu-->
+      <nav id="header-nav">
+        
+          <!--<a href="mainpage.html" id="header-logo"><img src="images/AU-ath-logo.png"></a>-->
+          <a href="{{ url_for('main.mainpage') }}">AU Athletics Connect</a>
+          {% if is_admin %}
+
+          <a class="admin_icon" href="{{ url_for('admin.admin_default') }}" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                  </svg> Admin</a>
+          {%endif%}
+          {% if not_logged_in %}
+          {% else %}
+          <a class="logout" href="{{ url_for('users.logout') }}" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+          </svg> </a>
+          {%endif%}
+      </nav>
+    </header>
+      <div class="container">
+          {% block content %}{% endblock %}
+      </div>
+    
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <footer>
+      <h6>&copy;2023 Alliance University | All rights reserved | Designed by Capstone</h6>
+    </footer>  
+  </body>
+</html>

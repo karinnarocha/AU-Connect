@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <!--Body Code Start-->
+      <!--Hero Image Code-->     
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Welcome!</h1>
+          <h2>Communicate and be on the loop</h2>
+        </div>
+      </div>
+    <div class="background-picture-body">
+      <h3>Event Planning Administration</h3>
+      <div class="admin_form">
+        <form method="post" action="http://127.0.0.1:5000/admin">
+            {{ form1.hidden_tag() }}
+            <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Add the Event</legend>
+              <div class="form-group">
+                {{ form1.event_name.label(class="form-control-label")}}
+                {{ form1.event_name(class="form-control-label form-control-lg")}}
+              </div>
+              <div class="form-group">
+                {{ form1.event_date.label(class="form-control-label")}}
+                {{ form1.event_date(class="form-control-label form-control-lg")}}
+              </div>
+              <div class="form-group">
+                {{ form1.event_time.label(class="form-control-label")}}
+                {{ form1.event_time(class="form-control-label form-control-lg")}}
+              </div>
+              <div>
+                <label for="Select Sport Dropdown">Select the Sport</label>
+                <div class="dropdown">
+                   <select class="form-control form-control-lg" data-header="Select the Sport" name="sport_list" style="width: 100%" id="sport_id">
+                      {% for sport in sport_data %}
+                        <option value="{{ sport[0] }}">{{sport[1]}}</option>
+                      {% endfor %}
+                   </select>
+                </div>
+              </div>
+              <div>
+                <label for="Select Venue Dropdown">Select the Venue</label>
+                <div class="dropdown">
+                   <select class="form-control form-control-lg" data-header="Select the Venue" name="venue_list" style="width: 100%" id = "venue_id">
+                      {% for venue in venue_data %}
+                        <option value="{{ venue[0] }}">{{venue[1]}}</option>
+                      {% endfor %}
+                   </select>
+                </div>
+             </div>
+            </fieldset>
+            <div class="form-group" style = "text-align:center">
+              {{ form1.submit_event(class="btn btn-outline-info")}}
+            </div>            
+        </form>
+      </div>
+    </div>
+  <!--Body Code End-->
+{% endblock content %}
